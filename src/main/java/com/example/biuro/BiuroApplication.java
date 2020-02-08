@@ -9,5 +9,4 @@ public class BiuroApplication {
     public static void main(String[] args) {
         SpringApplication.run(BiuroApplication.class, args);
     }
-//hejospppppp
 }
