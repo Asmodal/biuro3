@@ -33,28 +33,28 @@ public class TourControler {
         tourRepository.findById(id)
                 .ifPresent(t -> System.out.println(t.getId()));
         return "tour";
-    }}
+    }
 
 //    @GetMapping("/list")
-//    public ModelAndView getProducts() {
+//    public ModelAndView getTour() {
 //        Map<String, Object> model = new HashMap<>();
-//        model.put("products", TourRepository.findAll());
-//        return new ModelAndView("products", model);
+//        model.put("tour", TourRepository.findAll());
+//        return new ModelAndView("tour", model);
 //    }
-//
-//    @PostMapping("/save")
-//    public ModelAndView postSaveProduct(@ModelAttribute Tour tour) {
-//        tourRepository.save(tour);
-//        Map<String, Object> model = new HashMap<>();
-//        model.put("created", tour);
-//        return new ModelAndView("productCreated", model);
-//    }
+
+    @PostMapping("/save")
+    public ModelAndView postSaveTour(@ModelAttribute Tour tour) {
+        tourRepository.save(tour);
+        Map<String, Object> model = new HashMap<>();
+        model.put("created", tour);
+        return new ModelAndView("tourCreated", model);
+    }}
 //
 //    @GetMapping("/save")
 //    public ModelAndView getSaveProduct() {
 //        ModelAndView modelAndView = new ModelAndView();
-//        modelAndView.setViewName("productform");
-//        modelAndView.getModel().put("product", new Tour());
+//        modelAndView.setViewName("tourform");
+//        modelAndView.getModel().put("tour", new Tour());
 //
 //        return modelAndView;
 //    }

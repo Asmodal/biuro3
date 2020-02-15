@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .menu {
+            float: left;
+            width: 20%;
+        }
+        .menuitem {
+            padding: 8px;
+            margin-top: 7px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .main {
+            float: left;
+            width: 60%;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+        .right {
+            background-color: lightblue;
+            float: left;
+            width: 20%;
+            padding: 10px 15px;
+            margin-top: 7px;
+        }
+        @media only screen and (max-width:800px) {
+            /* For tablets: */
+            .main {
+                width: 80%;
+                padding: 0;
+            }
+            .right {
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width:500px) {
+            /* For mobile phones: */
+            .menu, .main, .right {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body style="font-family:Verdana;">
+<div style="background-color:#f1f1f1;padding:15px;">
+    <h1>Pogromcy Systemu</h1>
+    <h3>Najlepsze Biuro Podrozy w systemie</h3>
+</div>
+<div style="overflow:auto">
+    <div class="menu">
+        <button onclick="redirect()">Zamow wycieczke</button>
+        <p id="demo"></p>
+        <script>
+            function redirect() {
+                window.location = "/tour?id=1"
+            }
+        </script>
+        <button onclick="myFunction()">Dostepne wycieczki</button>
+        <p id="demo2"></p>
+        <script>
+            function myFunction() {
+                document.getElementById("demo2").innerHTML = "tutaj chcemy aby wyświetliły się wycieczki z database" ;
+            }
+        </script>
+    </div>
+    <div class="main">
+        <h2>Pogromcy Systemu</h2>
+        <p>Trzej wspaniali Influancerzy, ktorzy dzieki intelektowi wysla Cie nawet w kosmos (jesli oczywiscie chcesz - zamow wycieczke, lub wybierz dostepna z Naszej bazy.</p>
+        <img src="https://fly.pl/wp-content/uploads/2018/04/Malediwy-prywatne-bungalowy.jpg" style="width:100%">
+    </div>
+    <div class="right">
+        <h2>O co chodzi?</h2>
+        <p>Na tej stronie mozesz zamowic wycieczke Twoich MARZEN! </p>
+        <h2>Gdzie?</h2>
+        <p>W Internecie</p>
+        <h2>Cena?</h2>
+        <p>Cena idealnie dobrana do wszystkich - bijemy konkurencje jak Klitschko</p>
+    </div>
+</div>
+<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> Copyright© by Damian Brychcy, Kamil Labedzki, Aleksander Golawski</div>
+</body>
+</html>
