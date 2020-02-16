@@ -59,14 +59,39 @@
             function redirect() {
                 window.location = "/tour?id=1"
             }
+
         </script>
+
+        <button onclick="redirect()">Rejestracja</button>
+        <p id="demo1"></p>
+
+        <script>
+            function redirect() {
+                window.location = "/userRegister"
+            }
+        </script>
+
+        <button onclick="redirect()">Logowanie</button>
+        <p id="demo3"></p>
+
+        <script>
+            function redirect() {
+                window.location = "/loggedInPage"
+            }
+        </script>
+
         <button onclick="myFunction()">Dostepne wycieczki</button>
         <p id="demo2"></p>
+
+
+
         <script>
             function myFunction() {
                 document.getElementById("demo2").innerHTML = "tutaj chcemy aby wyświetliły się wycieczki z database" ;
             }
         </script>
+
+
     </div>
     <div class="main">
         <h2>Pogromcy Systemu</h2>
@@ -85,4 +110,3 @@
 <div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> Copyright© by Damian Brychcy, Kamil Labedzki, Aleksander Golawski</div>
 </body>
 </html>
-//ble
